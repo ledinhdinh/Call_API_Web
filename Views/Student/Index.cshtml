@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "Danh sách sinh viên";
+}
+
+@model IEnumerable<Call_API_Web.Models.StudentModel>
+
+<table class="table table-hover text-center">
+    <thead>
+        <tr>
+            <th>Họ tên</th>
+            <th>Mã lớp</th>
+            <th>Điện thoại</th>
+            <th>Địa chỉ</th>
+            <th>Ảnh</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.hoten</td>
+                <td>@item.malop  </td>
+                <td>@item.dienthoai</td>
+                <td>@item.diachi </td>
+                <td>@item.anh </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
